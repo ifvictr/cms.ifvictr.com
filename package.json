@@ -1,24 +1,22 @@
 {
-  "name": "ghost-on-heroku",
-  "description": "Just a blogging platform on Heroku.",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cobyism/ghost-on-heroku.git"
-  },
-  "bugs": "https://github.com/TryGhost/Ghost/issues",
-  "private": true,
-  "version": "1.18.4",
-  "dependencies": {
-    "casper": "github:tryghost/Casper#2.1.7",
-    "ghost": "^1.18.4",
-    "ghost-storage-adapter-s3": "^2.3.0",
-    "mysql": "^2.14.1"
-  },
-  "engines": {
-    "node": "6.11.x"
-  },
-  "scripts": {
-    "start": "node server.js"
-  }
+    "name": "blog.ifvictr.com",
+    "version": "1.18.4",
+    "description": "Source code of my Ghost-on-Heroku blog.",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ifvictr/blog.ifvictr.com.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": "6.11.x"
+    },
+    "dependencies": {
+        "casper": "github:TryGhost/Casper#2.1.7",
+        "ghost": "^1.18.4",
+        "ghost-storage-adapter-s3": "^2.3.0",
+        "mysql": "^2.14.1"
+    }
 }
