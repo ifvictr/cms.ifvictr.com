@@ -1,6 +1,6 @@
 {
     "name": "blog.ifvictr.com",
-    "version": "1.18.4",
+    "version": "1.19.0",
     "description": "Source code of my Ghost-on-Heroku blog.",
     "scripts": {
         "start": "node server.js"
@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "casper": "github:TryGhost/Casper#2.1.7",
-        "ghost": "^1.18.4",
+        "ghost": "^1.19.0",
         "ghost-storage-adapter-s3": "^2.3.0",
         "mysql": "^2.14.1"
     }
