@@ -4,45 +4,11 @@ const fs = require("fs");
 const path = require("path");
 const url = require("url");
 
-var envValues = require("./common/env-values");
-var appRoot = path.join(__dirname, "..");
+const envValues = require("./common/env-values");
+const appRoot = path.join(__dirname, "..");
 
 function createConfig() {
-    var fileStorage;
-    var storage;
-
-    if(!!process.env.S3_ACCESS_KEY_ID) {
-        fileStorage = true;
-        storage = {
-            active: "s3",
-            "s3": {
-                accessKeyId: process.env.S3_ACCESS_KEY_ID,
-                secretAccessKey: process.env.S3_ACCESS_SECRET_KEY,
-                bucket: process.env.S3_BUCKET_NAME,
-                region: process.env.S3_BUCKET_REGION,
-                assetHost: process.env.S3_ASSET_HOST_URL
-            }
-        };
-    }
-    else if(!!process.env.BUCKETEER_AWS_ACCESS_KEY_ID) {
-        fileStorage = true;
-        storage = {
-            active: "s3",
-            "s3": {
-                accessKeyId: process.env.BUCKETEER_AWS_ACCESS_KEY_ID,
-                secretAccessKey: process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY,
-                bucket: process.env.BUCKETEER_BUCKET_NAME,
-                region: process.env.S3_BUCKET_REGION,
-                assetHost: process.env.S3_ASSET_HOST_URL
-            }
-        };
-    }
-    else {
-        fileStorage = false;
-        storage = {};
-    }
-
-    var config = {
+    const config = {
         url: process.env.PUBLIC_URL,
         logging: {
             level: "info",
@@ -58,12 +24,12 @@ function createConfig() {
                 }
             }
         },
-        fileStorage: fileStorage,
-        storage: storage,
+        fileStorage: false,
+        storage: {},
         database: {
             client: "mysql",
             connection: getMysqlConfig(envValues.mysqlDatabaseUrl),
-            pool: { min: 0, max: 5 },
+            pool: {min: 0, max: 5},
             debug: false
         },
         server: {
@@ -86,24 +52,22 @@ function getMysqlConfig(connectionUrl) {
         return {};
     }
 
-    var dbConfig = url.parse(connectionUrl);
+    const dbConfig = url.parse(connectionUrl);
     if(dbConfig == null) {
         return {};
     }
 
-    var dbAuth = dbConfig.auth ? dbConfig.auth.split(":") : [];
-    var dbUser = dbAuth[0];
-    var dbPassword = dbAuth[1];
-    var dbName = dbConfig.pathname != null ? dbConfig.pathname.split("/")[1] : "ghost";
-    var dbConnection = {
+    const dbAuth = dbConfig.auth ? dbConfig.auth.split(":") : [];
+    const dbConnection = {
         host: dbConfig.hostname,
         port: dbConfig.port || "3306",
-        user: dbUser,
-        password: dbPassword,
-        database: dbName
+        user: dbAuth[0],
+        password: dbAuth[1],
+        database: dbConfig.pathname != null ? dbConfig.pathname.split("/")[1] : "ghost"
     };
+
     return dbConnection;
 }
 
-var configContents = JSON.stringify(createConfig(), null, 2);
+const configContents = JSON.stringify(createConfig(), null, 2);
 fs.writeFileSync(path.join(appRoot, "config.production.json"), configContents);
