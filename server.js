@@ -16,7 +16,5 @@ if(cluster.isMaster) {
 }
 else {
     // Run Ghost in each worker/processor core.
-    ghost().then(server => {
-        server.start();
-    });
+    ghost().then(server => server.start());
 }
