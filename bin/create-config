@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// Ghost Configuration for Heroku
 
 const fs = require("fs");
 const path = require("path");
@@ -73,6 +72,9 @@ function createConfig() {
         },
         paths: {
             contentPath: path.join(appRoot, "/content/")
+        },
+        privacy: {
+            useUpdateCheck: false
         }
     };
 
