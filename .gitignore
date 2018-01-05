@@ -1,7 +1,7 @@
-node_modules/
-npm-debug.log*
-
+.c9/
+.git/
 content/data/*.db
 content/logs/
+node_modules/
 config.production.json
-content/data/ghost-local.db
+npm-debug.log
