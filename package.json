@@ -1,6 +1,6 @@
 {
     "name": "blog.ifvictr.com",
-    "version": "1.20.0",
+    "version": "1.20.3",
     "description": "Source code of my Ghost-on-Heroku blog.",
     "scripts": {
         "start": "node server.js"
@@ -14,8 +14,8 @@
         "node": "6.11.x"
     },
     "dependencies": {
-        "casper": "github:TryGhost/Casper#2.1.7",
-        "ghost": "^1.20.0",
+        "casper": "github:TryGhost/Casper#2.1.9",
+        "ghost": "^1.20.3",
         "mysql": "^2.15.0"
     }
 }
