@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 
-const mysql = require("mysql");
-const envValues = require("./common/env-values");
+const mysql = require('mysql')
+const envValues = require('./common/env-values')
 
-console.error("Awaiting MySQL database…");
-pingDatabaseUntilConnected();
+console.error('Awaiting MySQL database…')
+pingDatabaseUntilConnected()
 
 function pingDatabaseUntilConnected() {
-    const connection = mysql.createConnection(envValues.mysqlDatabaseUrl);
-    connection.query("SELECT 1", (error, results, fields) => {
-        if(error) {
-            console.error(`Database not yet available: ${error.message}`);
-            setTimeout(pingDatabaseUntilConnected, 5000);
+    const connection = mysql.createConnection(envValues.mysqlDatabaseUrl)
+    connection.query('SELECT 1', (error, results, fields) => {
+        if (error) {
+            console.error(`Database not yet available: ${error.message}`)
+            setTimeout(pingDatabaseUntilConnected, 5000)
         }
         else {
-            console.error("Database connected.");
-            connection.end();
-            process.exit(0);
+            console.error('Database connected.')
+            connection.end()
+            process.exit(0)
         }
-    });
+    })
 }

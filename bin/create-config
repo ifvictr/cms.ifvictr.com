@@ -1,23 +1,23 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const url = require("url");
+const fs = require('fs')
+const path = require('path')
+const url = require('url')
 
-const envValues = require("./common/env-values");
-const appRoot = path.join(__dirname, "..");
+const envValues = require('./common/env-values')
+const appRoot = path.join(__dirname, '..')
 
 function createConfig() {
     const config = {
         url: process.env.PUBLIC_URL,
         logging: {
-            level: "info",
-            transports: ["stdout"]
+            level: 'info',
+            transports: ['stdout']
         },
         mail: {
-            transport: "SMTP",
+            transport: 'SMTP',
             options: {
-                service: "Mailgun",
+                service: 'Mailgun',
                 auth: {
                     user: process.env.MAILGUN_SMTP_LOGIN,
                     pass: process.env.MAILGUN_SMTP_PASSWORD
@@ -27,47 +27,49 @@ function createConfig() {
         fileStorage: false,
         storage: {},
         database: {
-            client: "mysql",
+            client: 'mysql',
             connection: getMysqlConfig(envValues.mysqlDatabaseUrl),
-            pool: {min: 0, max: 5},
+            pool: { min: 0, max: 5 },
             debug: false
         },
         server: {
-            host: "0.0.0.0",
+            host: '0.0.0.0',
             port: process.env.PORT
         },
         paths: {
-            contentPath: path.join(appRoot, "/content/")
+            contentPath: path.join(appRoot, '/content/')
         },
         privacy: {
             useUpdateCheck: false
         }
-    };
+    }
 
-    return config;
+    return config
 }
 
 function getMysqlConfig(connectionUrl) {
-    if(connectionUrl == null) {
-        return {};
+    if (connectionUrl == null) {
+        return {}
     }
 
-    const dbConfig = url.parse(connectionUrl);
-    if(dbConfig == null) {
-        return {};
+    const dbConfig = url.parse(connectionUrl)
+    if (dbConfig == null) {
+        return {}
     }
 
-    const dbAuth = dbConfig.auth ? dbConfig.auth.split(":") : [];
+    const dbAuth = dbConfig.auth ? dbConfig.auth.split(':') : []
     const dbConnection = {
         host: dbConfig.hostname,
-        port: dbConfig.port || "3306",
+        port: dbConfig.port || '3306',
         user: dbAuth[0],
         password: dbAuth[1],
-        database: dbConfig.pathname != null ? dbConfig.pathname.split("/")[1] : "ghost"
-    };
+        database: dbConfig.pathname != null
+            ? dbConfig.pathname.split('/')[1]
+            : 'ghost'
+    }
 
-    return dbConnection;
+    return dbConnection
 }
 
-const configContents = JSON.stringify(createConfig(), null, 2);
-fs.writeFileSync(path.join(appRoot, "config.production.json"), configContents);
+const configContents = JSON.stringify(createConfig(), null, 2)
+fs.writeFileSync(path.join(appRoot, 'config.production.json'), configContents)
