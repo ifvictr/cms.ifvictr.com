@@ -1,21 +1,21 @@
 {
-    "name": "blog.ifvictr.com",
-    "version": "2.18.1",
-    "description": "Source code of my Ghost-on-Heroku blog.",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/ifvictr/blog.ifvictr.com.git"
-    },
-    "license": "MIT",
-    "engines": {
-        "node": "^10.13.0"
-    },
-    "dependencies": {
-        "casper": "github:TryGhost/Casper#2.9.5",
-        "ghost": "^2.18.1",
-        "mysql": "^2.16.0"
-    }
+  "name": "blog.ifvictr.com",
+  "version": "2.18.1",
+  "description": "A modified setup of Ghost for deployment on Heroku.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ifvictr/blog.ifvictr.com.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^10.13.0"
+  },
+  "dependencies": {
+    "casper": "github:TryGhost/Casper#2.9.5",
+    "ghost": "^2.18.1",
+    "mysql": "^2.16.0"
+  }
 }
