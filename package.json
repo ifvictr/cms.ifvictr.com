@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "casper": "github:TryGhost/Casper#2.5.0",
-        "ghost": "^2.0.0",
+        "ghost": "2.0.0",
         "mysql": "^2.16.0"
     }
 }
