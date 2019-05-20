@@ -1,6 +1,6 @@
 {
   "name": "blog.ifvictr.com",
-  "version": "2.21.0",
+  "version": "2.22.1",
   "description": "A modified setup of Ghost for deployment on Heroku.",
   "scripts": {
     "start": "node server.js"
@@ -14,8 +14,8 @@
     "node": "^10.13.0"
   },
   "dependencies": {
-    "casper": "github:TryGhost/Casper#2.9.11",
-    "ghost": "^2.21.0",
+    "casper": "github:TryGhost/Casper#2.10.1",
+    "ghost": "^2.22.1",
     "mysql": "^2.16.0"
   }
 }
