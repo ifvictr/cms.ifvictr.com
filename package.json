@@ -1,7 +1,6 @@
 {
   "name": "blog.ifvictr.com",
   "version": "2.22.1",
-  "description": "A modified setup of Ghost for deployment on Heroku.",
   "scripts": {
     "start": "node server.js"
   },
