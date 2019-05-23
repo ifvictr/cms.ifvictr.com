@@ -1,12 +1,12 @@
 {
-  "name": "blog.ifvictr.com",
+  "name": "cms.ifvictr.com",
   "version": "2.22.1",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ifvictr/blog.ifvictr.com.git"
+    "url": "git://github.com/ifvictr/cms.ifvictr.com.git"
   },
   "license": "MIT",
   "engines": {
