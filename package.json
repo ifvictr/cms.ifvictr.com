@@ -1,20 +1,18 @@
 {
   "name": "cms.ifvictr.com",
   "version": "2.22.1",
+  "repository": "https://github.com/ifvictr/cms.ifvictr.com",
+  "license": "MIT",
+  "author": "Victor Truong <me@ifvictr.com>",
   "scripts": {
     "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ifvictr/cms.ifvictr.com.git"
-  },
-  "license": "MIT",
-  "engines": {
-    "node": "^10.13.0"
   },
   "dependencies": {
     "casper": "github:TryGhost/Casper#2.10.1",
     "ghost": "^2.22.1",
     "mysql": "^2.16.0"
+  },
+  "engines": {
+    "node": "^10.13.0"
   }
 }
