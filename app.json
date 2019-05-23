@@ -1,8 +1,8 @@
 {
-  "name": "blog.ifvictr.com",
+  "name": "cms.ifvictr.com",
   "description": "A modified setup of Ghost for deployment on Heroku.",
   "logo": "https://cdn.ifvictr.com/images/ifvictr.com/avatar/1.png",
-  "repository": "https://github.com/ifvictr/blog.ifvictr.com",
+  "repository": "https://github.com/ifvictr/cms.ifvictr.com",
   "scripts": {
     "postdeploy": "bin/init-deployment"
   },
