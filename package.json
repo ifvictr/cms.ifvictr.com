@@ -1,6 +1,6 @@
 {
   "name": "cms.ifvictr.com",
-  "version": "2.22.1",
+  "version": "2.23.0",
   "repository": "https://github.com/ifvictr/cms.ifvictr.com",
   "license": "MIT",
   "author": "Victor Truong <me@ifvictr.com>",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "casper": "github:TryGhost/Casper#2.10.1",
-    "ghost": "^2.22.1",
+    "ghost": "^2.23.0",
     "mysql": "^2.16.0"
   },
   "engines": {
