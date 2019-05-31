@@ -11,6 +11,14 @@
     "jawsdb",
     "mailgun"
   ],
+  "buildpacks": [
+    {
+      "url": "heroku-community/nginx"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
   "env": {
     "PUBLIC_URL": {
       "description": "The HTTPS URL of this app: either your custom domain or default 'herokuapp.com' hostname.",
