@@ -22,7 +22,7 @@
   "env": {
     "PUBLIC_URL": {
       "description": "The HTTPS URL of this app: either your custom domain or default 'herokuapp.com' hostname.",
-      "value": "https://<your app name>.herokuapp.com"
+      "value": "https://YOURAPPNAME.herokuapp.com"
     }
   }
 }
