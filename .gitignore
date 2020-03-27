@@ -1,7 +1,5 @@
-.c9/
 .git/
 content/data/*.db
 content/logs/
 node_modules/
 config.production.json
-npm-debug.log
