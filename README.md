@@ -1,6 +1,6 @@
 # [cms.ifvictr.com](https://cms.ifvictr.com)
 
-A modified setup of Ghost for deployment on Heroku. Based on @cobyism's [ghost-on-heroku](https://github.com/cobyism/ghost-on-heroku).
+A setup of Ghost for deployment on Heroku. Based on @cobyism's [ghost-on-heroku](https://github.com/cobyism/ghost-on-heroku).
 
 ## Deploy
 

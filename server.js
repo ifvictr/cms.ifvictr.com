@@ -3,7 +3,7 @@ const ghost = require('ghost')
 
 // Run a single Ghost process
 ghost()
-    .then(ghostServer => ghostServer.start())
+    .then(server => server.start())
     .then(() => {
         // Tell Nginx that Ghost is ready to receive traffic
         const fd = fs.openSync('/tmp/app-initialized', 'w')
