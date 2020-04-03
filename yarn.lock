@@ -2710,10 +2710,10 @@ ghost-storage-base@0.0.4, ghost-storage-base@^0.0.4:
   dependencies:
     moment "2.24.0"
 
-ghost-storage-github@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ghost-storage-github/-/ghost-storage-github-2.0.0.tgz#984bc6798743ab99eec138a538fa0c4fe8314f0f"
-  integrity sha512-xdVaqUqsWhDdQVJ+txPOFsGYn/DGH6hDprr+1aCVapDKRYeJbyAO6gtprMCfa93+teumsstI2q1qGyj4jw4sTQ==
+ghost-storage-github@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ghost-storage-github/-/ghost-storage-github-2.0.1.tgz#32d5fc4b3e1c8e536e1db1412c33c2bd3cdc9735"
+  integrity sha512-sTJOXHnwCsseDi9iRW37UBxDYmCCKqTIN8lF9gqc/FOjkVzkDOqFkLSCuB1qYUNgp/wHcp2UBlMMjX5bdXVaBw==
   dependencies:
     "@octokit/plugin-retry" "^3.0.1"
     "@octokit/plugin-throttling" "^3.2.0"
