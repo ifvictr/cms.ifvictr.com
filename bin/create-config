@@ -24,7 +24,6 @@ function createConfig() {
                 }
             }
         },
-        fileStorage: false,
         storage: {},
         database: {
             client: 'mysql',
