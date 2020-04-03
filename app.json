@@ -1,6 +1,6 @@
 {
   "name": "cms.ifvictr.com",
-  "description": "A setup of Ghost for deployment on Heroku",
+  "description": "Easily deploy Ghost on Heroku, with GitHub for storage",
   "logo": "https://ghost.org/icons/icon-256x256.png",
   "repository": "https://github.com/ifvictr/cms.ifvictr.com",
   "scripts": {
