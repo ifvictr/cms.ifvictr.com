@@ -1,4 +1,4 @@
-# [cms.ifvictr.com](https://cms.ifvictr.com)
+# cms.ifvictr.com
 
 Easily deploy Ghost on Heroku, with GitHub for storage. Based on @cobyism's [ghost-on-heroku](https://github.com/cobyism/ghost-on-heroku).
 
