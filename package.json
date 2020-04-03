@@ -1,9 +1,22 @@
 {
   "name": "cms.ifvictr.com",
   "version": "3.12.1",
-  "repository": "https://github.com/ifvictr/cms.ifvictr.com",
+  "private": true,
+  "homepage": "https://github.com/ifvictr/cms.ifvictr.com#readme",
+  "bugs": {
+    "url": "https://github.com/ifvictr/cms.ifvictr.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifvictr/cms.ifvictr.com.git"
+  },
   "license": "MIT",
-  "author": "Victor Truong <me@ifvictr.com>",
+  "author": {
+    "name": "Victor Truong",
+    "email": "victor@victortruong.com",
+    "url": "https://victortruong.com"
+  },
+  "main": "./server.js",
   "scripts": {
     "start": "node server.js"
   },
