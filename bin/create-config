@@ -8,6 +8,22 @@ const envValues = require('./common/env-values')
 const appRoot = path.join(__dirname, '..')
 
 function createConfig() {
+    let storage = {}
+    if (!!process.env.GHOST_GITHUB_TOKEN) {
+        storage = {
+            active: 'ghost-storage-github',
+            'ghost-storage-github': {
+                baseUrl: process.env.GHOST_GITHUB_BASE_URL,
+                branch: process.env.GHOST_GITHUB_BRANCH,
+                destination: process.env.GHOST_GITHUB_DESTINATION,
+                owner: process.env.GHOST_GITHUB_OWNER,
+                repo: process.env.GHOST_GITHUB_REPO,
+                token: process.env.GHOST_GITHUB_TOKEN,
+                useRelativeUrls: process.env.GHOST_GITHUB_USE_RELATIVE_URLS
+            }
+        }
+    }
+
     const config = {
         url: process.env.PUBLIC_URL,
         logging: {
@@ -24,8 +40,7 @@ function createConfig() {
                 }
             }
         },
-        fileStorage: false,
-        storage: {},
+        storage,
         database: {
             client: 'mysql',
             connection: getMysqlConfig(envValues.mysqlDatabaseUrl),

@@ -1,7 +1,7 @@
 {
   "name": "cms.ifvictr.com",
   "description": "A setup of Ghost for deployment on Heroku",
-  "logo": "https://cdn.ifvictr.com/images/ifvictr.com/avatar/2.png",
+  "logo": "https://ghost.org/icons/icon-256x256.png",
   "repository": "https://github.com/ifvictr/cms.ifvictr.com",
   "scripts": {
     "postdeploy": "bin/init-deployment"
@@ -20,8 +20,33 @@
     }
   ],
   "env": {
+    "GHOST_GITHUB_BASE_URL": {
+      "description": "Base URL of newly saved images. Uses `raw.githubusercontent.com` by default.",
+      "required": false
+    },
+    "GHOST_GITHUB_BRANCH": {
+      "description": "Branch to push assets to. Defaults to `master`.",
+      "required": false
+    },
+    "GHOST_GITHUB_DESTINATION": {
+      "description": "Directory to push assets to. Defaults to `/`.",
+      "required": false
+    },
+    "GHOST_GITHUB_OWNER": {
+      "description": "Username of the user/organization the repository is under."
+    },
+    "GHOST_GITHUB_REPO": {
+      "description": "Name of the repository."
+    },
+    "GHOST_GITHUB_TOKEN": {
+      "description": "An access token from the account commits will be authored by."
+    },
+    "GHOST_GITHUB_USE_RELATIVE_URLS": {
+      "description": "Whether or not to return relative URLs instead of absolute URLs. Might be of use to people who generate and serve a static version of their Ghost blog.",
+      "required": false
+    },
     "PUBLIC_URL": {
-      "description": "The HTTPS URL of this app: either your custom domain or default 'herokuapp.com' hostname.",
+      "description": "The HTTPS URL of this app: either your custom domain or default `herokuapp.com` hostname.",
       "value": "https://YOURAPPNAME.herokuapp.com"
     }
   }
