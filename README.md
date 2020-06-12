@@ -8,4 +8,4 @@ Easily deploy Ghost on Heroku, with GitHub for storage. Based on @cobyism's [gho
 
 ## License
 
-[MIT](LICENSE.txt)
+[MIT License](LICENSE.txt)
