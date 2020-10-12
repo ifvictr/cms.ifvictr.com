@@ -22,8 +22,9 @@
   },
   "dependencies": {
     "casper": "github:TryGhost/Casper#3.0.12",
-    "ghost": "3.13.1",
+    "ghost": "^3.35.5",
     "ghost-storage-github": "2.0.1",
+    "heroku": "^7.45.0",
     "mysql": "2.18.1"
   },
   "engines": {
