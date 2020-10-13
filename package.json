@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "casper": "github:TryGhost/Casper#3.0.12",
+    "the-shell": "github:mityalebedev/The-Shell#v3.0.0",
     "ghost": "^3.35.5",
     "ghost-storage-github": "2.0.1",
     "heroku": "^7.45.0",

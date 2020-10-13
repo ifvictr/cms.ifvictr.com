@@ -3,3 +3,4 @@ content/data/*.db
 content/logs/
 node_modules/
 config.production.json
+package-lock.json
