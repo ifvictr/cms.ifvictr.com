@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+        <header class="post-header">
+            <a id="blog-logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="Blog Logo" />
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </a>
+            <div class="inner">
+                {{> "site-nav"}}
+            </div>
+        </header>
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+        {{! Everything below outputs content of the the post which has been published }}
+        <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+
+        <h1 class="post-title">{{{title}}}</h1>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+            {{#if primary_author}}
+                <section class="author">
+                    <h4>{{primary_author.name}}</h4>
+                    <p>{{primary_author.bio}}</p>
+                </section>
+            {{/if}}
+        </footer>
+
+        {{/post}}
+
+    </article>
+
+</main>
