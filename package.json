@@ -1,6 +1,6 @@
 {
   "name": "cms.ifvictr.com",
-  "version": "3.13.1",
+  "version": "3.40.2",
   "private": true,
   "homepage": "https://github.com/ifvictr/cms.ifvictr.com#readme",
   "bugs": {
@@ -21,8 +21,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "casper": "github:TryGhost/Casper#3.0.12",
-    "ghost": "3.13.1",
+    "casper": "github:TryGhost/Casper#3.1.2",
+    "ghost": "3.40.2",
     "ghost-storage-github": "2.0.1",
     "mysql": "2.18.1"
   },
